@@ -1,0 +1,27 @@
+[
+  {
+    "name": "name",
+    "required": false,
+    "maxLength": 10,
+    "dataType": "string"
+  },
+  {
+    "name": "email",
+    "required": false,
+    "dataType": "string",
+    "pattern": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+  },
+  {
+    "name": "birthdate",
+    "required": false,
+    "dataType": "date",
+    "dateFormat": "yyyy-MM-dd"
+  },
+  {
+    "name": "phone",
+    "required": false,
+    "dataType": "string",
+    "unique": true
+  }
+]
+
