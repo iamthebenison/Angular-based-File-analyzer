@@ -109,14 +109,14 @@ public class FilesController {
             return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(new ResponseMessage(message));
         }
         //check if file is a XLSX, XLSM, CSV, and XML
-        if (!file.getContentType().contains("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") &&
+        /*if (!file.getContentType().contains("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") &&
                 !file.getContentType().contains("application/vnd.ms-excel") &&
                 !file.getContentType().contains("text/csv") &&
                 !file.getContentType().contains("text/xml") &&
                 !file.getContentType().contains("application/xml")) {
             message = "File must be a XLSX, XLSM, CSV, and XML!";
             return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(new ResponseMessage(message));
-        }
+        }*/
         return null;
     }
 
