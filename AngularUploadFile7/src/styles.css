@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&display=swap');
+
+
 body{
     display: flex;
     justify-content: center;
@@ -8,4 +12,31 @@ body{
     background: linear-gradient(90deg, rgba(168,235,202,1) 0%, rgba(169,244,243,1) 46%, rgba(189,203,242,1) 100%);
     background-size: cover;
     background-position: center;
+}
+
+.welc{
+    font-size: 4rem;
+    font-family: Belanosima;
+    font-style: normal;
+    color: rgb(181, 9, 9);
+    height: auto ;
+    width: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    animation: floating 3s linear infinite;
+
+}   
+
+@keyframes floating {
+    0%{
+        transform: translate(-30px);
+    }
+    50%
+    {
+        transform: translate(30px);
+    }
+    100%{
+        transform: translate(-30px);
+    }
 }
