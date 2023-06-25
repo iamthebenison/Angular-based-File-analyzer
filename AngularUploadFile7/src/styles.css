@@ -4,7 +4,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(pexels-mudassir-ali-2680270.jpg) no-repeat;
+    background: rgb(168,235,202);
+    background: linear-gradient(90deg, rgba(168,235,202,1) 0%, rgba(169,244,243,1) 46%, rgba(189,203,242,1) 100%);
     background-size: cover;
     background-position: center;
 }

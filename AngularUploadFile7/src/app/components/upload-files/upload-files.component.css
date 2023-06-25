@@ -1,0 +1,56 @@
+*{
+    font-size: 1.25rem;
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 40px;
+    border-radius: 12px;
+    
+  }
+  
+  .card {
+    border-radius: 10px;
+    background-color: rgb(213, 248, 255);
+  }
+  
+  .text-center {
+    padding: 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background: rgb(47,60,240);
+    background: linear-gradient(90deg, rgba(47,60,240,1) 6%, rgb(11, 79, 214) 48%, rgba(123,36,244,1) 100%);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .custom-file-label::after {
+    content: 'Browse';
+  }
+  
+  .btn-primary{
+    border-radius: 20px;
+  }
+
+  .progress-bar {
+    border-radius: 20px;
+  }
+  
+  .alert {
+    margin-top: 20px;
+    padding: 15px;
+  }
+  .card-header {
+  text-align: center;
+  background: none;
+}
+  
+  .card.bg-gradient-primary-light {
+    background: rgb(47,60,240);
+    background: linear-gradient(90deg, rgba(47,60,240,1) 6%, rgb(11, 79, 214) 48%, rgba(123,36,244,1) 100%);
+  }
+.container py-5{
+    color: antiquewhite;
+}

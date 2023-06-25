@@ -1,4 +1,37 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpEvent } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UploadFileService {
+
+  private baseUrl = 'http://localhost:8080';
+
+  constructor(private http: HttpClient) { }
+
+  upload(file: File): Observable<HttpEvent<any>> {
+    const headers = new HttpHeaders();
+    headers.set('Content-Type', 'application/json');
+
+    const formData = {
+      file: file
+    };
+
+    return this.http.post<HttpEvent<any>>(`${this.baseUrl}/upload/profiles`, formData, {
+      headers: headers,
+      reportProgress: true
+    });
+  }
+
+  getFiles(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/files`);
+  }
+}
+
+
+/*import { Injectable } from '@angular/core';
 import { HttpClient, HttpRequest, HttpHeaders, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -16,7 +49,7 @@ export class UploadFileService {
 
     formData.append('file', file);
 
-    const req = new HttpRequest('POST', `${this.baseUrl}/upload`, formData, {
+    const req = new HttpRequest('POST', `${this.baseUrl}/upload/profiles`, formData, {
       reportProgress: true,
       responseType: 'json'
     });
@@ -27,4 +60,4 @@ export class UploadFileService {
   getFiles(): Observable<any> {
     return this.http.get(`${this.baseUrl}/files`);
   }
-}
+}*/
