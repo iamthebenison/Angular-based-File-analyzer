@@ -11,23 +11,24 @@ export class UploadFileService {
 
   constructor(private http: HttpClient) { }
 
-  upload(file: File): Observable<HttpEvent<any>> {
+  upload(jsonString,fileName): Observable<any> {
     const headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json');
 
-    const formData = {
-      file: file
-    };
+    // const formData = {
 
-    return this.http.post<HttpEvent<any>>(`${this.baseUrl}/upload/profiles?fileName=varaprasad`, JSON.stringify(formData), {
+    //   file: file
+    // };
+
+    return this.http.post<HttpEvent<any>>(`${this.baseUrl}/upload/profiles?fileName=`+fileName, jsonString, {
       headers: headers,
       reportProgress: true
     });
   }
 
-  getFiles(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/files`);
-  }
+  // getFiles(): Observable<any> {
+  //   return this.http.get(`${this.baseUrl}/files`);
+  // }
 }
 
 
