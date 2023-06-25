@@ -19,7 +19,7 @@ export class UploadFileService {
       file: file
     };
 
-    return this.http.post<HttpEvent<any>>(`${this.baseUrl}/upload/profiles`, formData, {
+    return this.http.post<HttpEvent<any>>(`${this.baseUrl}/upload/profiles?fileName=varaprasad`, JSON.stringify(formData), {
       headers: headers,
       reportProgress: true
     });
