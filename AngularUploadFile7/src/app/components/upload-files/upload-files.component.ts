@@ -51,29 +51,14 @@ export class UploadFilesComponent implements OnInit {
       });
 
       const jsonString = JSON.stringify(rows);
-      
-      // // Create a Blob with the JSON data
-      // const jsonBlob = new Blob([jsonString], { type: 'application/json' });
-
-      // // Create a new File object with the necessary properties
-      // const jsonFile = new File([jsonBlob], this.currentFile.name.split('.')[0] + '.json', {
-      //   lastModified: this.currentFile.lastModified,
-      //   type: 'application/json'
-      // });
 
       // Continue with the file upload process using the JSON file
       this.progress = Math.round((58 / 100!) * 100);
       this.uploadService.upload(jsonString,fileName).subscribe(
         event => {
           console.log(event);
-          // if (event.type === HttpEventType.UploadProgress) {
-            // this.progress = Math.round((event.loaded / event.total!) * 100);
-          // } else if (event instanceof HttpResponse) {
           this.progress = 100;
           this.message = event.message;
-            
-            // this.fileInfos = this.uploadService.getFiles();
-          // }
         },
         err => {
           this.progress = 0;
