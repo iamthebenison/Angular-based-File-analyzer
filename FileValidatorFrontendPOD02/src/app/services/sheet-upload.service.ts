@@ -1,3 +1,14 @@
+// import { Injectable } from '@angular/core';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class SheetUploadService {
+
+//   constructor() { }
+// }
+
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpEvent } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -5,13 +16,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UploadFileService {
+export class SheetUploadService {
 
   private baseUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
 
-  upload(jsonString,fileName): Observable<any> {
+  upload(jsonString: string,fileName: string): Observable<any> {
     const headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json');
 

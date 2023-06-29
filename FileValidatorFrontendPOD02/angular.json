@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularUploadFile7": {
+    "FileValidatorFrontendPOD02": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-upload-file7",
+            "outputPath": "dist/file-validator-frontend-pod02",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AngularUploadFile7:build:production"
+              "browserTarget": "FileValidatorFrontendPOD02:build:production"
             },
             "development": {
-              "browserTarget": "AngularUploadFile7:build:development"
+              "browserTarget": "FileValidatorFrontendPOD02:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularUploadFile7:build"
+            "browserTarget": "FileValidatorFrontendPOD02:build"
           }
         },
         "test": {
@@ -94,8 +94,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }

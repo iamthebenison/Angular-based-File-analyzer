@@ -1,23 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { UploadFileService } from 'src/app/services/upload-file.service';
+import { SheetUploadService } from 'src/app/services/sheet-upload.service';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import * as XLSX from 'xlsx';
 
 @Component({
-  selector: 'app-upload-files',
-  templateUrl: './upload-files.component.html',
-  styleUrls: ['./upload-files.component.css']
+  selector: 'app-sheets-upload',
+  templateUrl: './sheets-upload.component.html',
+  styleUrls: ['./sheets-upload.component.css']
 })
-export class UploadFilesComponent implements OnInit {
+
+export class SheetsUploadComponent implements OnInit {
   allowedFileTypes: string[] = ['csv', 'xml', 'xlsm', 'xlsx'];
-  selectedFiles: FileList;
-  currentFile: File;
+  selectedFiles!: FileList;
+  currentFile!: File;
   progress = 0;
   message = '';
-  fileInfos: Observable<any>;
+  fileInfos!: Observable<any>;
 
-  constructor(private uploadService: UploadFileService) { }
+  constructor(private uploadService: SheetUploadService) { }
 
   upload() {
     this.progress = 0;
@@ -114,9 +115,10 @@ export class UploadFilesComponent implements OnInit {
     this.selectedFiles = undefined!;
   }
 
-  selectFile(event) {
+  selectFile(event: any) {
     this.selectedFiles = event.target.files;
   }
+  
 
   ngOnInit() {
     // this.fileInfos = this.uploadService.getFiles();
