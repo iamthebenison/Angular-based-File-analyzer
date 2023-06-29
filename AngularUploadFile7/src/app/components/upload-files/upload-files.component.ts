@@ -51,6 +51,12 @@ export class UploadFilesComponent implements OnInit {
 
       const headers: string[] = jsonData[0] as string[];
       jsonData.splice(0, 1);
+      
+      // Validate the total number of columns
+      if (headers.length > 20) {
+        this.message = 'Invalid file. Total number of columns exceeds the limit of 20.';
+        return;
+      }
 
       const rows = jsonData.map((row: unknown) => {
         const rowData = row as string[];
