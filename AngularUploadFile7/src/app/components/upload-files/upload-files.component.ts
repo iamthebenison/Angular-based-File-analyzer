@@ -85,6 +85,7 @@ export class UploadFilesComponent implements OnInit {
         Object.keys(row).forEach((header) => {
           if (row[header] !== '') {
             filteredRow[header] = row[header];
+            this.message="Blank columns are removed";
           }
         });
         return filteredRow;
