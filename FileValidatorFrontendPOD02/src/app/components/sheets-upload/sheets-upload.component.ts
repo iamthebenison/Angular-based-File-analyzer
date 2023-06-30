@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SheetUploadService } from 'src/app/services/sheet-upload.service';
-import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import * as XLSX from 'xlsx';
 
@@ -30,8 +29,8 @@ export class SheetsUploadComponent implements OnInit {
     const fileSizeInMB = this.currentFile.size / (1024 * 1024); // File size in MB
     if (fileSizeInMB > 10) {
       this.message = 'File size exceeds the limit of 10 MB.';
-      return;
-    }
+      return;
+  }
 
     //Checking the format of the file.
     const fileExtension = this.currentFile.name.split('.').pop()?.toLowerCase() || '';
@@ -47,8 +46,20 @@ export class SheetsUploadComponent implements OnInit {
       const workbook = XLSX.read(fileContent, { type: 'binary' });
 
       const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-      const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, cellDates: false } as XLSX.Sheet2JSONOpts);
+      const jsonData: any[][] = XLSX.utils.sheet_to_json(worksheet, { header: 1, cellDates: false } as XLSX.Sheet2JSONOpts);
 
+      // Checking if the file has any columns
+      if (jsonData.length === 0 || jsonData[0].length === 0) {
+        this.message = 'Invalid file. No columns found.';
+        return;
+      }
+
+      // Checking if all columns are empty
+      const allColumnsEmpty = jsonData.every(row => row.every(cellValue => cellValue === ''));
+      if (allColumnsEmpty) {
+        this.message = 'Invalid file. All columns are empty.';
+      return;
+  }
 
       const headers: string[] = jsonData[0] as string[];
       jsonData.splice(0, 1);
@@ -78,7 +89,7 @@ export class SheetsUploadComponent implements OnInit {
           }
         });
         return obj;
-      });
+      });
 
       // Remove blank columns
       const filteredRows = rows.map((row: any) => {
@@ -107,8 +118,8 @@ export class SheetsUploadComponent implements OnInit {
           this.message = err.error.message;
           this.currentFile = undefined!;
           console.log(err);
-        }
-      );
+        },
+        );
     };
 
     reader.readAsBinaryString(this.currentFile);
@@ -121,6 +132,5 @@ export class SheetsUploadComponent implements OnInit {
   
 
   ngOnInit() {
-    // this.fileInfos = this.uploadService.getFiles();
   }
 }
