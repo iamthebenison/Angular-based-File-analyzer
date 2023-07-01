@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Sheet Validator Using Angular JS and Spring Boot - Frontend</h1>
+<h1 align="center" id="title">Sheet Validator Using Angular FM and Spring Boot: Frontend </h1>
 
 <p align="center"><img src="https://socialify.git.ci/iamthebenison/Angular-based-File-analyzer/image?description=1&amp;descriptionEditable=It%20is%20the%20front%20end%20of%20an%20angular%20based%20spring%20boot%20supported%20application%20that%20works%20on%20analyzing%20files%20for%20rectifying%20and%20identification%20tasks.&amp;forks=1&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;pulls=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
 
