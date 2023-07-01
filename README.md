@@ -50,8 +50,7 @@ ng serve --port
 
 <h2>🍰 Contribution Guidelines:</h2>
 
-We invite your participation through issues and pull requests! You can peruse the contributing guidelines. When adding or changing a service please add tests. If you're new to the project maybe you'd like to open a pull request to address one of them. You can read a tutorial on adding pull requests.
-
+Through problems and pull requests, we invite your engagement! You can read the guidelines for contributing. Please include tests whenever you modify or add a service. You might want to file a pull request to address one of them if you're new to the project. A tutorial on adding pull requests is available.
   
   
 <h2>💻 Built with</h2>
