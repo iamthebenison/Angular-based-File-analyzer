@@ -1,14 +1,14 @@
-<h1 align="center" id="title">Sheet Validator Using Angular JS and Spring Boot - Frontend</h1>
+<h1 align="center" id="title">Sheet Validator Using Angular JS and Spring Boot:- Frontend</h1>
 
 <p align="center"><img src="https://socialify.git.ci/iamthebenison/Angular-based-File-analyzer/image?description=1&amp;descriptionEditable=It%20is%20the%20front%20end%20of%20an%20angular%20based%20spring%20boot%20supported%20application%20that%20works%20on%20analyzing%20files%20for%20rectifying%20and%20identification%20tasks.&amp;forks=1&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Circuit%20Board&amp;pulls=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
 
-<p id="description">With the modern digitization of the technology a lot of upload systems have come to light. Even with such introduction of systems there exist an acute need of analytical upload systems with user-specific control conditions. Recently the concept of file uploading has become very common in our environment but it does not have further functions apart from accepting file and storing it in the local drive or the database. With the modern digitization of the technology a lot of upload systems have come to light. Even with such introduction of systems there exist an acute need of analytical upload systems with user-specific control conditions. Recently the concept of file uploading has become very common in our environment but it does not have further functions apart from accepting file and storing it in the local drive or the database.</p>
+<p id="description">With the modern digitization of technology, a lot of upload systems have come to light. Even with the introduction of such systems, there is an acute need for analytical upload systems with user-specific control conditions. Recently, the concept of file uploading has become very common in our environment, but it does not have any further functions apart from accepting files and storing them on the local drive or in the database. With the modern digitization of technology, a lot of upload systems have come to light. Even with the introduction of such systems, there is an acute need for analytical upload systems with user-specific control conditions. Recently, the concept of file uploading has become very common in our environment, but it does not have any further functions apart from accepting files and storing them on the local drive or in the database.</p>
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://i.postimg.cc/mrg9qw0w/Proj.png" alt="project-screenshot" width="800" height="800/">
+<img src="https://i.postimg.cc/mrg9qw0w/Proj.png" alt="project-screenshot" width="800" height="600/">
 
-<img src="https://i.postimg.cc/28qrHBcZ/VTU-POD-02-Moment.jpg" alt="project-screenshot" width="800" height="800/">
+<img src="https://i.postimg.cc/28qrHBcZ/VTU-POD-02-Moment.jpg" alt="project-screenshot" width="800" height="600/">
 
   
   
@@ -50,7 +50,7 @@ ng serve --port
 
 <h2>🍰 Contribution Guidelines:</h2>
 
-We invite your participation through issues and pull requests! You can peruse the contributing guidelines. When adding or changing a service please add tests. If you're new to the project maybe you'd like to open a pull request to address one of them. You can read a tutorial on adding pull requests.
+We invite your participation through issues and pull requests! You can peruse the contributing guidelines. When adding or changing a service, please add tests. If you're new to the project, maybe you'd like to open a pull request to address one of them. You can read a tutorial on adding pull requests.
 
   
   
